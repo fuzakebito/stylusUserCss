@@ -2,8 +2,8 @@
 @name           DenseTD
 @namespace      shanotinohito
 @version        1.0.0
-@homepageURL    https://github.com/shanotinohito/DenseTD
-@updateURL      https://github.com/shanotinohito/DenseTD/raw/main/usercss/DenseTD.user.css
+@homepageURL    https://github.com/shanotinohito/stylusUserCss
+@updateURL      https://github.com/shanotinohito/stylusUserCss/raw/main/usercss/DenseTD.user.css
 @author         shanotinohito
 ==/UserStyle== */
 
@@ -26,7 +26,6 @@
         background: #1c1c1c!important;
     }
     body {
-        font-family: "Jost*", "IPAex ゴシック", "sans-selif";
         font-feature-settings: "palt" 1;
     }
     .js-app-loading {
