@@ -1,0 +1,237 @@
+/* ==UserStyle==
+@name           DenseTD
+@namespace      shanotinohito
+@version        1.0.0
+@homepageURL    https://github.com/shanotinohito/DenseTD
+@updateURL      https://raw.githubusercontent.com/shanotinohito/DenseTD/main/usercss/DenseTD.user.css
+@author         shanotinohito
+==/UserStyle== */
+
+@-moz-document domain("tweetdeck.twitter.com") {
+    :root {
+		--accentColor: #009688;
+        --linkColor: var(--accentColor);
+        --visitedColor: #0097A7;
+        --selectColor: #afafaf;
+        --selectedTextColor: #1c1c1c;
+        --bgColor: #262626;
+    }
+    * {
+        font-weight: 400!important;
+    }
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    html {
+        background: #1c1c1c!important;
+    }
+    body {
+        font-family: "Jost*", "IPAex ゴシック", "sans-selif";
+        font-feature-settings: "palt" 1;
+    }
+    .js-app-loading {
+        display: none!important;
+    }
+    html.dark .compose, .compose-text-title, .btn-on-blue, .compose-remember-state, .column-nav-link {
+        color: #bbb!important;
+    }
+    html.dark a.active, html.dark a.selected, html.dark a.highlight [href="#"], html.dark a.is-selected, html.dark [class*="state-active"], html.dark .btn-link, html.dark .active {
+        background: transparent!important;
+    }
+    .app-title {
+        display: none;
+    }
+    html.dark .column-navigator-overflow {
+        bottom: 210px;
+    }
+    html.dark .app-navigator {
+        bottom: 50px;
+        left: 0;
+        right: 0;
+    }
+    .js-account-summary {
+        position: absolute;
+        bottom: -50px;
+        left: 0;
+        right: 0;
+    }
+    .js-app-columns-container * {
+        color: #bbb
+    }
+    html.dark .app-columns {
+        padding: 0 0 0 3px;
+    }
+    .multi-row, .js-popover-content, .js-app-header, .js-header-action, .app-navigator, .column-nav-item, .app-title, .js-column-header, .column-header, .column-panel, .stream-item, .js-stream-item, .js-search-filter, .button-tray, .js-detail-container, .js-detail-view-inline, .detail-view-inline, .prf-meta, .prf-actions, .actionsMenu, .dropdown-menu, .inline-reply, .js-drag-handle, .mdl-inner, .js-inreply, .mdl, .flex {
+        background-color: var(--bgColor)!important;
+    }
+    .is-selected-tweet {
+        border-left: 1px solid var(--accentColor);
+    }
+    .is-selected-tweet .item-box {
+        padding-left: 9px!important;
+    }
+    .reply-triangle, .replyto-caret {
+        border-bottom-color: var(--accentColor)!important;
+    }
+    .js-docked-compose, .js-docked-compose footer {
+        background: var(--bgColor)!important;
+        border-right: var(--accentColor) 1px solid
+    }
+    .js-docked-compose {
+        border-radius: 5px;
+    }
+    .js-docked-compose footer {
+        border-bottom-right-radius: 5px;
+    }
+    .js-docked-compose button, .js-send-button, .js-send, .mdl .js-action-button {
+        background: #414141!important;
+        border-color: var(--accentColor)!important;
+        transition: 0.4s!important;
+    }
+    .js-docked-compose button:hover, .js-send-button:hover, .js-send:hover, .mdl .js-action-button:hover {
+        background: var(--accentColor)!important;
+        transition: 0.2s!important
+    }
+    .mdl .js-action-button {
+        color: #fff;
+    }
+    .js-app-columns-container, .app-columns-container {
+        background: #1c1c1c!important;
+    }
+    .js-detail-view-inline-text, .compose-text-container, .js-reply-tweetbox {
+        background: #414141!important;
+    }
+    .app-search-fake, .js-user-actions-menu {
+        border-color: var(--accentColor)!important;
+        color: var(--accentColor)!important;
+    }
+    .app-navigator .icon, .icon-plus {
+        color: var(--accentColor)
+    }
+    .action-text, .action-text .Icon {
+        background-color: var(--accentColor)!important;
+        border-color: var(--accentColor)!important;
+        color: #fff!important
+    }
+    .thread {
+        background-color: #afafaf!important;
+    }
+    .column-header {
+        border: var(--accentColor) 1px solid!important;
+        border-radius: 5px;
+    }
+    .app-header-inner {
+        border-right: var(--accentColor) 1px solid!important;
+        border-radius: 5px;
+    }
+
+    .tweet-button {
+        background-color: var(--accentColor)!important;
+    }
+    .js-modal-panel {
+        background-color: var(--bgColor)!important;
+        box-shadow: 0 0 15px -1px#000;
+    }
+    .open-modal {
+        background: rgba(66, 66, 66, 0.8)!important
+    }
+    .compose-text, .compose-reply-tweet {
+        background: #414141!important;
+        color: #bbb!important;
+    }
+    .icon-play-video:before {
+        color: var(--bgColor) !important;
+        background: transparent !important;
+    }
+    /* Links and text selection */
+    a:link, a:link *, .link-gray-dark, .txt-link {
+        color: var(--linkColor) !important;
+        text-decoration: none !important;
+    }
+    a:visited, a:visited * {
+        color: var(--visitedColor) !important
+    }
+
+    a.active, a.selected, a.highlight [href="#"], a.is-selected, [class*="state-active"], .btn-link, .active > a {
+        color: #fff !important;
+        font-weight: bold !important;
+        background-color: rgba(255, 255, 255, 0.1) !important
+    }
+
+    a:hover, a:hover *, a *:hover, a:hover *:hover, .link-gray-dark:hover, a[class*="label"], a[class*="Label"], span[class*="Label"] a {
+        color: #fff !important;
+        transition: color 200ms !important
+    }
+
+    ::selection {
+        background: var(--selectColor) !important;
+        color: var(--selectedTextColor) !important;
+    }
+    /* Textbox like inputs */
+    input, textarea {
+        background: #414141 !important;
+        color: #ddd !important;
+    }
+    input[type="text"]:hover, textarea:hover {
+        background: #414141 !important;
+        transition: all 200ms !important
+    }
+
+    input[type="text"]:focus, textarea:focus {
+        background: #414141 !important;
+        border-color: var(--linkColor) !important;
+        transition: all 200ms !important
+    }
+
+    input[disabled], .rc-button-default-disabled {
+        opacity: 0.5 !important
+    }
+    .stream-item .tweet-footer {
+        position: absolute;
+        right: 10px;
+        bottom: -21px;
+        transform: translate(5px, 2px);
+        transition: 0.4s;
+        padding-left: 8px;
+        padding-bottom: 3px;
+        background: var(--bgColor);
+        border-top: var(--bgColor) solid 1px;
+        border-bottom: #000 solid 1px;
+        border-left: #000 solid 1px;
+        border-right: #000 solid 1px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        z-index: 2;
+        display: none!important;
+    }
+    .is-selected-tweet .tweet-footer, .stream-item:hover:not(.is-selected-tweet) .tweet-footer {
+        display: initial!important;
+    }
+    .dropdown-menu {
+        left: -200px;
+        z-index: 10;
+    }
+    html.dark .bg-color-twitter-white {
+        background: #414141!important;
+    }
+    html.dark .js-stream-item-content {
+        padding-right: 5px;
+    }
+    html.dark .js-stream-item-content .js-tweet:not(.is-conversation):not(.txt-mute) {
+        padding-left: 0px;
+    }
+    html.dark .js-stream-item-content .js-tweet:not(.is-conversation):not(.txt-mute) .js-tweet-header .account-link .nbfc {
+        position: relative;
+        left: 32px;
+        margin-bottom: 6px;
+        width: calc(100% - 30px);
+    }
+    html.dark .js-stream-item-content .js-tweet:not(.is-conversation):not(.txt-mute) .account-link .tweet-img {
+        left: 46px;
+        bottom: 3px;
+    }
+    html.dark .js-stream-item-content .js-tweet:not(.is-conversation):not(.txt-mute) .account-link .tweet-img .tweet-avatar {
+        height: 23px;
+        width: 23px;
+    }
+}
