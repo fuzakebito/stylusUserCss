@@ -10,4 +10,4 @@
  **Firefox**: https://addons.mozilla.org/ja/firefox/addon/styl-us/
 
 ## cssのインストール
- [TweetDeck用css][usercss/DenseTD.user.css?raw=true]
+[TweetDeck用css](usercss/DenseTD.user.css?raw=true)
