@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DenseTD
 @namespace      shanotinohito
-@version        1.1.2
+@version        1.1.3
 @homepageURL    https://github.com/shanotinohito/stylusUserCss
 @updateURL      https://github.com/shanotinohito/stylusUserCss/raw/main/usercss/DenseTD.user.css
 @author         shanotinohito
@@ -139,6 +139,21 @@
     .is-selected-tweet .item-box {
         padding-left: 9px!important;
     }
+    /*ヘッダーを細く*/
+    .column-header {
+        height: 30px!important;
+        max-height: 30px!important;
+        line-height: 30px!important;
+    }
+    .column-drag-handle {
+        visibility: hidden!important;
+    }
+    .column-header-title {
+        transform: translateY(-11px)!important;
+    }
+    .column-title-editable {
+        align-items: normal!important;
+    }
     /*
     ##################################################
     ############# Coloring Only Elements #############
@@ -175,20 +190,6 @@
     }
     .column-nav-link:hover::after {
         text-shadow: none;
-    }
-    .column-header {
-        height: 30px;
-        max-height: 30px;
-        line-height: 30px;
-    }
-    .column-drag-handle {
-        visibility: hidden;
-    }
-    .column-header-title {
-        transform: translateY(-11px);
-    }
-    .column-title-editable {
-        align-items: normal!important;
     }
     /*アイコンを小さくして文字をたくさん表示するレイアウトに変更する*/
     .js-stream-item-content {
@@ -694,20 +695,6 @@
     }
     html.dark .thread {
         background-color: var(--inputBgColor);
-    }
-    html.dark .column-header {
-        height: 30px;
-        max-height: 30px;
-        line-height: 30px;
-    }
-    html.dark .column-drag-handle {
-        visibility: hidden;
-    }
-    html.dark .column-header-title {
-        transform: translateY(-11px);
-    }
-    html.dark .column-title-editable {
-        align-items: normal!important;
     }
     /*アイコンを小さくして文字をたくさん表示するレイアウトに変更する*/
     html.dark .js-stream-item-content {
