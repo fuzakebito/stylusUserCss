@@ -161,12 +161,19 @@
     ##################################################
     */
     .column-nav-item:not(.js-column-nav-menu-item) {
+        color: var(--mainTextColor);
         left: -1px;
         border-top: 1px solid var(--accentColor);
         border-right: 1px solid var(--accentColor);
         border-bottom: 1px solid var(--accentColor);
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
+    }
+    .column-nav-link:hover{
+        text-shadow: 0 0 4px var(--accentColor), 0 0 10px var(--accentColor);
+    }
+    .column-nav-link:hover::after{
+        text-shadow:none;
     }
     /*アイコンを小さくして文字をたくさん表示するレイアウトに変更する*/
     .js-stream-item-content {
@@ -328,6 +335,19 @@
     .inline-reply .other-replies-link,
     .inline-reply .other-replies-link:hover {
         color: var(--accentColor);
+    }
+    /*ツイートドロワー*/
+    .compose{
+        color: var(--accentColor);
+    }
+    .compose .account-selector-grid-mode .color-twitter-white{
+        color: var(--accentColor)!important;
+    }
+    .compose .compose-account .compose-account-names{
+        color: var(--mainTextColor);
+    }
+    .compose .compose-remember-state{
+        color: var(--mainTextColor);
     }
     /*青い文字を上書き*/
     a,
