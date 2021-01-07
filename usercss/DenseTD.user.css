@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DenseTD
 @namespace      shanotinohito
-@version        1.1.0
+@version        1.1.1
 @homepageURL    https://github.com/shanotinohito/stylusUserCss
 @updateURL      https://github.com/shanotinohito/stylusUserCss/raw/main/usercss/DenseTD.user.css
 @author         shanotinohito
@@ -169,11 +169,11 @@
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
     }
-    .column-nav-link:hover{
+    .column-nav-link:hover {
         text-shadow: 0 0 4px var(--accentColor), 0 0 10px var(--accentColor);
     }
-    .column-nav-link:hover::after{
-        text-shadow:none;
+    .column-nav-link:hover::after {
+        text-shadow: none;
     }
     /*アイコンを小さくして文字をたくさん表示するレイアウトに変更する*/
     .js-stream-item-content {
@@ -221,7 +221,6 @@
     .add-participant,
     .facet-type.is-active,
     .dataminr,
-    .mdl,
     .detail-view-inline,
     .column-header,
     .column-panel,
@@ -318,7 +317,7 @@
         background-color: var(--bgBgColor);
     }
     /*左下設定ドロップダウン*/
-    .dropdown-menu .is-selected{
+    .dropdown-menu .is-selected {
         background-color: var(--inputBgColor);
     }
     /*####################文字色#####################*/
@@ -337,16 +336,16 @@
         color: var(--accentColor);
     }
     /*ツイートドロワー*/
-    .compose{
+    .compose {
         color: var(--accentColor);
     }
-    .compose .account-selector-grid-mode .color-twitter-white{
+    .compose .account-selector-grid-mode .color-twitter-white {
         color: var(--accentColor)!important;
     }
-    .compose .compose-account .compose-account-names{
+    .compose .compose-account .compose-account-names {
         color: var(--mainTextColor);
     }
-    .compose .compose-remember-state{
+    .compose .compose-remember-state {
         color: var(--mainTextColor);
     }
     /*青い文字を上書き*/
@@ -357,7 +356,10 @@
     .color-twitter-blue,
     .other-replies-link,
     .other-replies-link:hover,
-    .facet-subtitle {
+    .facet-subtitle,
+    .med-flaglink,
+    .med-origlink,
+    .is-inverted-light a{
         color: var(--linkColor);
     }
     /*カラムの細々としたやつら*/
@@ -814,8 +816,32 @@
         background-color: var(--bgBgColor);
     }
     /*左下設定ドロップダウン*/
-    html.dark .dropdown-menu .is-selected{
+    html.dark .dropdown-menu .is-selected {
         background-color: var(--inputBgColor);
+    }
+    /*設定画面*/
+    html.dark .mdl-column-sml {
+        background-color: var(--bgBgColor);
+    }
+    html.dark .list-account:hover:active,
+    html.dark .list-account:hover:focus,
+    html.dark .list-account:hover:hover,
+    html.dark .list-link:hover:active,
+    html.dark .list-link:hover:focus,
+    html.dark .list-link:hover:hover,
+    html.dark .list-listaccount:hover:active,
+    html.dark .list-listaccount:hover:focus,
+    html.dark .list-listaccount:hover:hover,
+    html.dark .list-listmember:hover:active,
+    html.dark .list-listmember:hover:focus,
+    html.dark .list-listmember:hover:hover,
+    html.dark .list-subtitle:hover:active,
+    html.dark .list-subtitle:hover:focus,
+    html.dark .list-subtitle:hover:hover,
+    html.dark .list-twitter-list:hover:active,
+    html.dark .list-twitter-list:hover:focus,
+    html.dark .list-twitter-list:hover:hover {
+        background-color: var(--bgColor);
     }
     /*####################文字色#####################*/
     /*基本文字色*/
@@ -840,7 +866,9 @@
     html.dark .color-twitter-blue,
     html.dark .other-replies-link,
     html.dark .other-replies-link:hover,
-    html.dark .facet-subtitle {
+    html.dark .facet-subtitle,
+    html.dark .med-flaglink,
+    html.dark .med-origlink {
         color: var(--linkColor);
     }
     /*カラムの細々としたやつら*/
