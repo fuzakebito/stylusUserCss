@@ -673,6 +673,9 @@
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
     }
+    html.dark .thread{
+        background-color: var(--inputBgColor);
+    }
     /*アイコンを小さくして文字をたくさん表示するレイアウトに変更する*/
     html.dark .js-stream-item-content {
         padding-right: 5px;
