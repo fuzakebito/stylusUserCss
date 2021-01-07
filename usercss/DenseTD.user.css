@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DenseTD
 @namespace      shanotinohito
-@version        1.1.3
+@version        1.1.4
 @homepageURL    https://github.com/shanotinohito/stylusUserCss
 @updateURL      https://github.com/shanotinohito/stylusUserCss/raw/main/usercss/DenseTD.user.css
 @author         shanotinohito
@@ -215,6 +215,9 @@
     /*左側のなんかへんな隙間を減らす*/
     .app-columns {
         padding: 0 0 0 3px;
+    }
+    .column{
+        margin: 0 2px 0 0;
     }
     /*
     ##################################################
@@ -720,6 +723,9 @@
     /*左側のなんかへんな隙間を減らす*/
     html.dark .app-columns {
         padding: 0 0 0 3px;
+    }
+    html.dark .column{
+        margin: 0 2px 0 0;
     }
     /*
     ##################################################
