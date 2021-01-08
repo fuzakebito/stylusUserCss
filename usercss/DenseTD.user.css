@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DenseTD
 @namespace      shanotinohito
-@version        1.1.5
+@version        1.1.6
 @homepageURL    https://github.com/shanotinohito/stylusUserCss
 @updateURL      https://github.com/shanotinohito/stylusUserCss/raw/main/usercss/DenseTD.user.css
 @author         shanotinohito
@@ -193,13 +193,14 @@
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
     }
-    .column-nav-link .column-heading{
+    .column-nav-link .column-heading {
         color: var(--mainTextColor);
     }
     .column-nav-link:hover {
         text-shadow: 0 0 4px var(--accentColor), 0 0 10px var(--accentColor);
     }
-    .column-nav-link:hover .column-heading,.column-nav-link:hover .attribution{
+    .column-nav-link:hover .column-heading,
+    .column-nav-link:hover .attribution {
         color: #fff;
     }
     .column-nav-link:hover::after {
@@ -234,8 +235,8 @@
         margin: 0 2px 0 0;
     }
     /*アプリヘッダー検索欄*/
-    .app-header .search-input-control input{
-        border:none;
+    .app-header .search-input-control input {
+        border: none;
     }
     /*画像表示をBetterTweetDeck風にする*/
     .overlay,
@@ -291,6 +292,13 @@
         margin-top: -21px;
         background: rgba(21, 21, 21, 0.6);
         border-radius: 50%;
+    }
+    .mdl-media-next .icon::before,
+    .mdl-media-prev .icon::before {
+        position: absolute;
+        left: 45%;
+        top: 50%;
+        transform: translate(-50%, -50%);
     }
     /*
     ##################################################
@@ -410,7 +418,7 @@
         background-color: var(--bgBgColor);
     }
     /*左下設定ドロップダウン*/
-    .dropdown-menu{
+    .dropdown-menu {
         background-color: var(--bgColor);
         transform: translateX(9px);
         box-shadow: none;
@@ -422,7 +430,7 @@
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
     }
-    .dropdown-menu a{
+    .dropdown-menu a {
         color: var(--mainTextColor)!important;
     }
     .dropdown-menu .is-selected {
@@ -473,13 +481,13 @@
         color: var(--linkColor);
     }
     /*アプリヘッダー*/
-    .app-nav-link-text{
+    .app-nav-link-text {
         color: var(--mainTextColor);
     }
     .app-nav-tab-text {
         color: var(--mainTextColor);
     }
-    .nav-user-info .fullname{
+    .nav-user-info .fullname {
         color: var(--mainTextColor);
     }
     /*カラムの細々としたやつら*/
@@ -886,6 +894,13 @@
         background: rgba(21, 21, 21, 0.6);
         border-radius: 50%;
     }
+    html.dark .mdl-media-next .icon::before,
+    html.dark .mdl-media-prev .icon::before {
+        position: absolute;
+        left: 45%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
     /*
     ##################################################
     ############# Coloring Only Elements #############
@@ -951,20 +966,20 @@
         background-color: var(--bgColor);
     }
     /*アカウントドロワー*/
-    html.dark .accounts-drawer{
+    html.dark .accounts-drawer {
         background-color: var(--bgBgColor)!important;
     }
-    html.dark .app-nav-tab.is-selected{
+    html.dark .app-nav-tab.is-selected {
         background: var(--bgBgColor);
         transform: translateX(1px);
     }
-    html.dark .account-settings-bb{
+    html.dark .account-settings-bb {
         background-color: var(--bgColor);
     }
-    html.dark .account-settings-row{
+    html.dark .account-settings-row {
         background-color: var(--bgColor);
     }
-    html.dark .join-team{
+    html.dark .join-team {
         background-color: var(--bgColor);
     }
     /*ツイート、リプライ*/
@@ -1021,7 +1036,7 @@
         background-color: var(--bgBgColor);
     }
     /*左下設定ドロップダウン*/
-    html.dark .dropdown-menu{
+    html.dark .dropdown-menu {
         background-color: var(--bgColor);
         transform: translateX(9px);
         box-shadow: none;
@@ -1033,7 +1048,7 @@
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
     }
-    html.dark .dropdown-menu a{
+    html.dark .dropdown-menu a {
         color: var(--mainTextColor)!important;
     }
     html.dark .dropdown-menu .is-selected {
