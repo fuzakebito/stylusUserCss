@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DenseTD
 @namespace      shanotinohito
-@version        1.1.4
+@version        1.1.5
 @homepageURL    https://github.com/shanotinohito/stylusUserCss
 @updateURL      https://github.com/shanotinohito/stylusUserCss/raw/main/usercss/DenseTD.user.css
 @author         shanotinohito
@@ -67,6 +67,10 @@
     .app-header .icon-plus,
     .app-navigator .icon {
         color: var(--accentColor)!important;
+    }
+    /*ツイート残りバイト数の常時表示*/
+    .js-character-count {
+        display: inline !important;
     }
     /*左下のアイコンの処刑*/
     .app-title {
@@ -134,7 +138,10 @@
         display: initial!important;
     }
     .is-selected-tweet {
-        border-left: 1px solid var(--accentColor);
+        border-left: 1px solid var(--accentColor)!important;
+    }
+    .is-selected-tweet .thread {
+        left: 26px;
     }
     .is-selected-tweet .item-box {
         padding-left: 9px!important;
@@ -148,7 +155,8 @@
     .column-drag-handle {
         visibility: hidden!important;
     }
-    .column-header-title {
+    .column-header-title,
+    .column-title-back .icon {
         transform: translateY(-11px)!important;
     }
     .column-title-editable {
@@ -185,8 +193,14 @@
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
     }
+    .column-nav-link .column-heading{
+        color: var(--mainTextColor);
+    }
     .column-nav-link:hover {
         text-shadow: 0 0 4px var(--accentColor), 0 0 10px var(--accentColor);
+    }
+    .column-nav-link:hover .column-heading,.column-nav-link:hover .attribution{
+        color: #fff;
     }
     .column-nav-link:hover::after {
         text-shadow: none;
@@ -216,8 +230,67 @@
     .app-columns {
         padding: 0 0 0 3px;
     }
-    .column{
+    .column {
         margin: 0 2px 0 0;
+    }
+    /*アプリヘッダー検索欄*/
+    .app-header .search-input-control input{
+        border:none;
+    }
+    /*画像表示をBetterTweetDeck風にする*/
+    .overlay,
+    .ovl {
+        background: rgba(0, 0, 0, 0.8);
+    }
+    .js-modal-panel.mdl.s-full.med-fullpanel {
+        pointer-events: none;
+        box-shadow: none;
+        background: transparent;
+    }
+    .med-fullpanel {
+        box-shadow: none;
+        background: transparent;
+    }
+    .is-inverted-light .mdl-btn-media,
+    .mdl-btn-media {
+        opacity: 1;
+    }
+    .js-mediatable .js-modal-panel .js-mediaembed,
+    .mdl-btn-media,
+    .med-tweet {
+        pointer-events: all;
+    }
+    .med-embeditem {
+        left: 50%;
+        transform: translate(-50%);
+        overflow: hidden;
+    }
+    .med-tray {
+        z-index: 9;
+    }
+    .js-modal-panel .js-media-image-link {
+        background-color: transparent;
+    }
+    .js-media-image-link,
+    article video.js-media-gif {
+        cursor: zoom-in !important;
+    }
+    .media-img {
+        max-width: 100% !important;
+    }
+    .mdl-media-next,
+    .mdl-media-prev {
+        z-index: 10;
+        background: transparent;
+    }
+    .mdl-media-next .icon,
+    .mdl-media-prev .icon {
+        width: 42px;
+        height: 42px;
+        margin-left: -21px;
+        margin-top: -21px;
+        background: rgba(21, 21, 21, 0.6);
+        border-radius: 50%;
     }
     /*
     ##################################################
@@ -268,7 +341,8 @@
     .mdl-lighter-on-dark,
     .dropdown-menu,
     .popover,
-    .column-nav-item {
+    .column-nav-item,
+    .column-detail .is-selected-tweet {
         background-color: var(--bgColor);
     }
     /*下地の色*/
@@ -336,8 +410,23 @@
         background-color: var(--bgBgColor);
     }
     /*左下設定ドロップダウン*/
+    .dropdown-menu{
+        background-color: var(--bgColor);
+        transform: translateX(9px);
+        box-shadow: none;
+        border-top: 1px solid var(--accentColor);
+        border-right: 1px solid var(--accentColor);
+        border-bottom: 1px solid var(--accentColor);
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    .dropdown-menu a{
+        color: var(--mainTextColor)!important;
+    }
     .dropdown-menu .is-selected {
-        background-color: var(--inputBgColor);
+        background-color: var(--bgBgColor);
     }
     /*####################文字色#####################*/
     /*基本文字色*/
@@ -379,8 +468,19 @@
     .med-flaglink,
     .med-origlink,
     .is-inverted-light a,
-    .is-actionable:hover .stat-word {
+    .is-actionable:hover .stat-word,
+    .conversation-more {
         color: var(--linkColor);
+    }
+    /*アプリヘッダー*/
+    .app-nav-link-text{
+        color: var(--mainTextColor);
+    }
+    .app-nav-tab-text {
+        color: var(--mainTextColor);
+    }
+    .nav-user-info .fullname{
+        color: var(--mainTextColor);
     }
     /*カラムの細々としたやつら*/
     button.btn-options-tray:focus,
@@ -440,6 +540,10 @@
         color: #fff;
         background: var(--accentColor)!important;
         transition: 0.2s!important
+    }
+    /*アプリヘッダー*/
+    .column-nav-updates {
+        color: var(--accentColor);
     }
     /*カラムヘッダー*/
     .column-header-link {
@@ -570,7 +674,7 @@
     input.is-hover.btn-fav.s-favorited[type=button] {
         background-color: var(--accentColor);
         border-color: var(--accentColor);
-        box-shadow: inset 0 0 0 15px rgba(0, 0, 0, 0.2);
+        box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.2);
     }
     .Button.btn-fav.s-favorited:active,
     .Button.Button--primary.is-active,
@@ -724,8 +828,63 @@
     html.dark .app-columns {
         padding: 0 0 0 3px;
     }
-    html.dark .column{
+    html.dark .column {
         margin: 0 2px 0 0;
+    }
+    /*画像表示をBetterTweetDeck風にする*/
+    html.dark .overlay,
+    html.dark .ovl {
+        background: rgba(0, 0, 0, 0.8);
+    }
+    html.dark .js-modal-panel.mdl.s-full.med-fullpanel {
+        pointer-events: none;
+        box-shadow: none;
+        background: transparent;
+    }
+    html.dark .med-fullpanel {
+        box-shadow: none;
+        background: transparent;
+    }
+    html.dark .is-inverted-light .mdl-btn-media,
+    html.dark .mdl-btn-media {
+        opacity: 1;
+    }
+    html.dark .js-mediatable .js-modal-panel .js-mediaembed,
+    html.dark .mdl-btn-media,
+    html.dark .med-tweet {
+        pointer-events: all;
+    }
+    html.dark .med-embeditem {
+        left: 50%;
+        transform: translate(-50%);
+        overflow: hidden;
+    }
+    html.dark .med-tray {
+        z-index: 9;
+    }
+    html.dark .js-modal-panel .js-media-image-link {
+        background-color: transparent;
+    }
+    html.dark .js-media-image-link,
+    html.dark article video.js-media-gif {
+        cursor: zoom-in !important;
+    }
+    html.dark .media-img {
+        max-width: 100% !important;
+    }
+    html.dark .mdl-media-next,
+    html.dark .mdl-media-prev {
+        z-index: 10;
+        background: transparent;
+    }
+    html.dark .mdl-media-next .icon,
+    html.dark .mdl-media-prev .icon {
+        width: 42px;
+        height: 42px;
+        margin-left: -21px;
+        margin-top: -21px;
+        background: rgba(21, 21, 21, 0.6);
+        border-radius: 50%;
     }
     /*
     ##################################################
@@ -775,9 +934,9 @@
     html.dark .app-navigator,
     html.dark .is-dataminr-tweet,
     html.dark .mdl-lighter-on-dark,
-    html.dark .dropdown-menu,
     html.dark .popover,
-    html.dark .column-nav-item {
+    html.dark .column-nav-item,
+    html.dark .column-detail .is-selected-tweet {
         background-color: var(--bgColor);
     }
     /*下地の色*/
@@ -789,6 +948,23 @@
     /*ツイートドロワー*/
     html.dark .compose,
     html.dark .old-composer-footer {
+        background-color: var(--bgColor);
+    }
+    /*アカウントドロワー*/
+    html.dark .accounts-drawer{
+        background-color: var(--bgBgColor)!important;
+    }
+    html.dark .app-nav-tab.is-selected{
+        background: var(--bgBgColor);
+        transform: translateX(1px);
+    }
+    html.dark .account-settings-bb{
+        background-color: var(--bgColor);
+    }
+    html.dark .account-settings-row{
+        background-color: var(--bgColor);
+    }
+    html.dark .join-team{
         background-color: var(--bgColor);
     }
     /*ツイート、リプライ*/
@@ -845,8 +1021,23 @@
         background-color: var(--bgBgColor);
     }
     /*左下設定ドロップダウン*/
+    html.dark .dropdown-menu{
+        background-color: var(--bgColor);
+        transform: translateX(9px);
+        box-shadow: none;
+        border-top: 1px solid var(--accentColor);
+        border-right: 1px solid var(--accentColor);
+        border-bottom: 1px solid var(--accentColor);
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    html.dark .dropdown-menu a{
+        color: var(--mainTextColor)!important;
+    }
     html.dark .dropdown-menu .is-selected {
-        background-color: var(--inputBgColor);
+        background-color: var(--bgBgColor);
     }
     /*設定画面*/
     html.dark .mdl-column-sml {
@@ -897,7 +1088,8 @@
     html.dark .other-replies-link:hover,
     html.dark .facet-subtitle,
     html.dark .med-flaglink,
-    html.dark .med-origlink {
+    html.dark .med-origlink,
+    html.dark .conversation-more {
         color: var(--linkColor);
     }
     /*カラムの細々としたやつら*/
@@ -942,20 +1134,23 @@
     html.dark .column-header .column-type-icon {
         color: var(--mainTextColor);
     }
-    .js-docked-compose button,
-    .js-send-button,
-    .js-send,
-    .mdl .js-action-button {
+    html.dark .js-docked-compose button,
+    html.dark .js-send-button,
+    html.dark .js-send,
+    html.dark .mdl .js-action-button {
         background: var(--inputBgColor)!important;
         border-color: var(--accentColor)!important;
         transition: 0.4s!important;
     }
-    .js-docked-compose button:hover,
-    .js-send-button:hover,
-    .js-send:hover,
-    .mdl .js-action-button:hover {
+    html.dark .js-docked-compose button:hover,
+    html.dark .js-send-button:hover,
+    html.dark .js-send:hover,
+    html.dark .mdl .js-action-button:hover {
         background: var(--accentColor)!important;
         transition: 0.2s!important
+    }
+    html.dark .column-nav-updates {
+        color: var(--accentColor);
     }
     /*カラムヘッダー*/
     html.dark .column-header-link {
@@ -1086,7 +1281,7 @@
     html.dark input.is-hover.btn-fav.s-favorited[type=button] {
         background-color: var(--accentColor);
         border-color: var(--accentColor);
-        box-shadow: inset 0 0 0 15px rgba(0, 0, 0, 0.2);
+        box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.2);
     }
     html.dark .Button.btn-fav.s-favorited:active,
     html.dark .Button.Button--primary.is-active,
