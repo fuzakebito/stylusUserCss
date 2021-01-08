@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DenseTD
 @namespace      shanotinohito
-@version        1.1.9
+@version        1.1.10
 @homepageURL    https://github.com/shanotinohito/stylusUserCss
 @updateURL      https://github.com/shanotinohito/stylusUserCss/raw/main/usercss/DenseTD.user.css
 @author         shanotinohito
@@ -12,7 +12,7 @@
     :root {
         --accentColor: #1da1f2;
         --linkColor: var(--accentColor);
-        --selectedBgColor: #ccc;
+        --selectedBgColor: #e4e4e4;
         --selectedTextColor: #222;
         --crevasseColor: var(--bgBgColor);
         --inputBgColor: var(--bgBgColor);
