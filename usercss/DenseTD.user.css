@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DenseTD
 @namespace      shanotinohito
-@version        1.1.8
+@version        1.1.9
 @homepageURL    https://github.com/shanotinohito/stylusUserCss
 @updateURL      https://github.com/shanotinohito/stylusUserCss/raw/main/usercss/DenseTD.user.css
 @author         shanotinohito
@@ -197,7 +197,7 @@
         color: var(--mainTextColor);
     }
     .column-nav-link:hover {
-        text-shadow: 0 0 4px var(--accentColor), 0 0 10px var(--accentColor);
+        text-shadow: 0 0 2px rgba(0,0,0,0.2), 0 0 2px var(--accentColor), 0 0 4px var(--accentColor), 0 0 10px var(--accentColor);
     }
     .column-nav-link:hover .column-heading,
     .column-nav-link:hover .attribution {
@@ -426,7 +426,19 @@
         background-color: var(--bgBgColor);
     }
     /*左下設定ドロップダウン*/
-    .dropdown-menu {
+    .app-header .dropdown-menu {
+        background-color: var(--bgColor);
+        transform: translateX(1px);
+        box-shadow: none;
+        border-top: 1px solid var(--accentColor);
+        border-right: 1px solid var(--accentColor);
+        border-bottom: 1px solid var(--accentColor);
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    .app-header.is-condensed .dropdown-menu {
         background-color: var(--bgColor);
         transform: translateX(9px);
         box-shadow: none;
@@ -1053,7 +1065,19 @@
         background-color: var(--bgBgColor);
     }
     /*左下設定ドロップダウン*/
-    html.dark .dropdown-menu {
+    html.dark .app-header .dropdown-menu {
+        background-color: var(--bgColor);
+        transform: translateX(1px);
+        box-shadow: none;
+        border-top: 1px solid var(--accentColor);
+        border-right: 1px solid var(--accentColor);
+        border-bottom: 1px solid var(--accentColor);
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    html.dark .app-header.is-condensed .dropdown-menu {
         background-color: var(--bgColor);
         transform: translateX(9px);
         box-shadow: none;
