@@ -162,6 +162,11 @@
     .column-title-editable {
         align-items: normal!important;
     }
+    /*タイムスタンプの変化でwidthが増減して画面が動いちゃうの帽子にmin-widthを定める*/
+    .tweet-timestamp {
+        min-width: 24px;
+        text-align: right;
+    }
     /*
     ##################################################
     ############# Coloring Only Elements #############
