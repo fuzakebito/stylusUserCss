@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DenseTD
 @namespace      shanotinohito
-@version        1.1.7
+@version        1.1.8
 @homepageURL    https://github.com/shanotinohito/stylusUserCss
 @updateURL      https://github.com/shanotinohito/stylusUserCss/raw/main/usercss/DenseTD.user.css
 @author         shanotinohito
@@ -12,8 +12,8 @@
     :root {
         --accentColor: #1da1f2;
         --linkColor: var(--accentColor);
-        --selectColor: #afafaf;
-        --selectedTextColor: #1c1c1c;
+        --selectedBgColor: #ccc;
+        --selectedTextColor: #222;
         --crevasseColor: var(--bgBgColor);
         --inputBgColor: var(--bgBgColor);
         --inputTextColor: #444;
@@ -24,8 +24,8 @@
     html.dark:root {
         --accentColor: #009688;
         --linkColor: var(--accentColor);
-        --selectColor: #afafaf;
-        --selectedTextColor: #1c1c1c;
+        --selectedBgColor: #eee;
+        --selectedTextColor: #222;
         --crevasseColor: #000;
         --inputBgColor: #414141;
         --inputTextColor: #ddd;
@@ -370,7 +370,7 @@
         border-radius: 45px 0 0 45px;
     }
     .app-navigator .app-nav-tab.is-selected .icon {
-        color :#fff!important;
+        color: #fff!important;
     }
     /*ツイート、リプライ*/
     .compose-text-container,
@@ -448,6 +448,11 @@
     /*基本文字色*/
     html {
         color: var(--mainTextColor);
+    }
+    /*選択文字色*/
+    ::selection {
+        color: var(--selectedTextColor);
+        background-color: var(--selectedBgColor);
     }
     /*アカウント名関連*/
     .account-link,
@@ -982,7 +987,7 @@
         border-radius: 45px 0 0 45px;
     }
     html.dark .app-navigator .app-nav-tab.is-selected .icon {
-        color :#fff!important;
+        color: #fff!important;
     }
     html.dark .account-settings-row {
         background-color: var(--bgBgColor);
@@ -990,9 +995,9 @@
     html.dark .join-team {
         background-color: var(--bgBgColor);
     }
-    html.dark .accounts-drawer .avatar-border--2{
+    html.dark .accounts-drawer .avatar-border--2 {
         border-color: var(--bgBgColor);
-        background-color :var(--bgBgColor);
+        background-color: var(--bgBgColor);
     }
     /*ツイート、リプライ*/
     html.dark .compose-text-container,
@@ -1094,6 +1099,11 @@
     /*基本文字色*/
     html.dark {
         color: var(--mainTextColor);
+    }
+    /*選択文字色*/
+    html.dark ::selection {
+        color: var(--selectedTextColor);
+        background-color: var(--selectedBgColor);
     }
     /*アカウント名関連*/
     html.dark .account-link,
