@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           DenseTD
 @namespace      shanotinohito
-@version        1.1.6
+@version        1.1.7
 @homepageURL    https://github.com/shanotinohito/stylusUserCss
 @updateURL      https://github.com/shanotinohito/stylusUserCss/raw/main/usercss/DenseTD.user.css
 @author         shanotinohito
@@ -363,6 +363,14 @@
     .compose,
     .old-composer-footer {
         background-color: var(--crevasseColor);
+    }
+    /*アカウントドロワー*/
+    .app-nav-tab.is-selected {
+        background: var(--accentColor);
+        border-radius: 45px 0 0 45px;
+    }
+    .app-navigator .app-nav-tab.is-selected .icon {
+        color :#fff!important;
     }
     /*ツイート、リプライ*/
     .compose-text-container,
@@ -967,20 +975,24 @@
     }
     /*アカウントドロワー*/
     html.dark .accounts-drawer {
-        background-color: var(--bgBgColor)!important;
+        background-color: var(--bgColor)!important;
     }
     html.dark .app-nav-tab.is-selected {
-        background: var(--bgBgColor);
-        transform: translateX(1px);
+        background: var(--accentColor);
+        border-radius: 45px 0 0 45px;
     }
-    html.dark .account-settings-bb {
-        background-color: var(--bgColor);
+    html.dark .app-navigator .app-nav-tab.is-selected .icon {
+        color :#fff!important;
     }
     html.dark .account-settings-row {
-        background-color: var(--bgColor);
+        background-color: var(--bgBgColor);
     }
     html.dark .join-team {
-        background-color: var(--bgColor);
+        background-color: var(--bgBgColor);
+    }
+    html.dark .accounts-drawer .avatar-border--2{
+        border-color: var(--bgBgColor);
+        background-color :var(--bgBgColor);
     }
     /*ツイート、リプライ*/
     html.dark .compose-text-container,
