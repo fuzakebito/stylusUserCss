@@ -11,3 +11,5 @@
 
 ## cssのインストール
 TweetDeck用css [インストール](usercss/DenseTD.user.css?raw=true)
+
+小説家になろう用css [インストール](usercss/syosetu.com.user.css?raw=true)

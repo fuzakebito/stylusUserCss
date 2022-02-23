@@ -1,0 +1,21 @@
+/* ==UserStyle==
+@name           syosetu.com
+@namespace      fuzakebito
+@version        0.0.0
+@homepageURL    https://github.com/fuzakebito/stylusUserCss
+@updateURL      https://github.com/fuzakebito/stylusUserCss/raw/main/usercss/syosetu.com.user.css
+@author         fuzakebito
+==/UserStyle== */
+
+@-moz-document domain("ncode.syosetu.com") {
+  :root {
+    --bg: #27262c;
+    --fg: #abaab9;
+    --mg: #aa88c8;
+    --cy: #5aaaaf;
+  }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+  }
+}
