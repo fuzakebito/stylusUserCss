@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           syosetu.com
 @namespace      fuzakebito
-@version        0.1.0
+@version        0.1.1
 @homepageURL    https://github.com/fuzakebito/stylusUserCss
 @updateURL      https://github.com/fuzakebito/stylusUserCss/raw/main/usercss/syosetu.com.user.css
 @author         fuzakebito
@@ -14,6 +14,7 @@
     --bg-morelight: #42404e;
     --gr: #7e7b8b;
     --fg: #bebdc9;
+    --fg-light: #e3e1ea;
     --red: #cc5655;
     --mg: #aa88c8;
     --br: #809fd1;
@@ -67,11 +68,23 @@
     border-radius: 3px;
     color: var(--mg);
   }
+  ul#head_nav .booklist a.login:hover {
+    background: var(--mg);
+    border-color: var(--mg);
+    border-radius: 3px;
+    color: var(--fg-light);
+  }
   .footerbookmark .booklist .login {
     background: var(--bg-light);
     border-color: var(--mg);
     border-radius: 3px;
     color: var(--mg) !important;
+  }
+  .footerbookmark .booklist a.login:hover {
+    background: var(--mg);
+    border-color: var(--mg);
+    border-radius: 3px;
+    color: var(--fg-light) !important;
   }
   ul#head_nav li.booklist_now a {
     background: var(--bg-morelight);
@@ -88,6 +101,9 @@
     border-color: var(--mg);
     border-radius: 3px;
     color: var(--mg);
+  }
+  #menu_off_2 {
+    border-color: var(--gr);
   }
   .novelview_navi {
     background: var(--bg-light);
@@ -107,13 +123,13 @@
     background: var(--bg-light);
     border: 1px solid var(--mg);
     border-radius: 3px;
-    color: var(--mg);
+    color: var(--mg) !important;
     text-shadow: none;
     font-weight: bold;
   }
   #pageBottom:hover, #pageTop:hover, .button:hover {
-    background: var(--bg-morelight);
-    color: var(--mg);
+    background: var(--mg);
+    color: var(--fg-light) !important;
   }
   .button:hover {
     border: 1px solid var(--mg);
