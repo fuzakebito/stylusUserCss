@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           syosetu.com
 @namespace      fuzakebito
-@version        0.0.6
+@version        0.0.7
 @homepageURL    https://github.com/fuzakebito/stylusUserCss
 @updateURL      https://github.com/fuzakebito/stylusUserCss/raw/main/usercss/syosetu.com.user.css
 @author         fuzakebito
@@ -51,6 +51,15 @@
     background: var(--bg-light);
     border-color: var(--mg);
     border-radius: 3px;
+  }
+  ul.novelview_menu input[type="text"], a.size {
+    background: var(--bg-light);
+    border-color: var(--mg);
+    border-radius: 3px;
+    color: var(--mg);
+  }
+  ul.novelview_menu a {
+    color: var(--cy);
   }
   .contents1 {
     background: var(--bg);
