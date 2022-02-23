@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           syosetu.com
 @namespace      fuzakebito
-@version        0.0.2
+@version        0.0.3
 @homepageURL    https://github.com/fuzakebito/stylusUserCss
 @updateURL      https://github.com/fuzakebito/stylusUserCss/raw/main/usercss/syosetu.com.user.css
 @author         fuzakebito
@@ -12,12 +12,22 @@
     --bg: #27262c;
     --bg-light: #35343d;
     --fg: #bebdc9;
+    --gr: #4aad78;
     --mg: #aa88c8;
     --cy: #5aaaaf;
   }
   body {
     background: var(--bg);
     color: var(--fg);
+  }
+  a {
+    color: var(--cy);
+  }
+  a:hover {
+    color: var(--gr);
+  }
+  a:visited {
+    color: var(--mg);
   }
   #novel_header {
     background: var(--bg-light);
