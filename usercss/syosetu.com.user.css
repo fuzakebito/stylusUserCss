@@ -52,14 +52,14 @@
     border-color: var(--mg);
     border-radius: 3px;
   }
-  ul.novelview_menu input[type="text"], a.size {
+  ul.novelview_menu input[type="text"], a.size, a.size:hover {
     background: var(--bg-light);
     border-color: var(--mg);
     border-radius: 3px;
     color: var(--mg);
   }
   ul.novelview_menu a {
-    color: var(--cy);
+    color: var(--mg);
   }
   .contents1 {
     background: var(--bg);
