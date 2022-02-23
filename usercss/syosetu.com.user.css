@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           syosetu.com
 @namespace      fuzakebito
-@version        0.0.1
+@version        0.0.2
 @homepageURL    https://github.com/fuzakebito/stylusUserCss
 @updateURL      https://github.com/fuzakebito/stylusUserCss/raw/main/usercss/syosetu.com.user.css
 @author         fuzakebito
@@ -10,7 +10,8 @@
 @-moz-document domain("ncode.syosetu.com") {
   :root {
     --bg: #27262c;
-    --fg: #abaab9;
+    --bg-light: #35343d;
+    --fg: #bebdc9;
     --mg: #aa88c8;
     --cy: #5aaaaf;
   }
@@ -19,10 +20,16 @@
     color: var(--fg);
   }
   #novel_header {
-    background: var(--bg);
+    background: var(--bg-light);
   }
   ul#head_nav li a {
     color: var(--fg);
+  }
+  ul#head_nav .booklist .login {
+    background: var(--bg-light);
+    border-color: var(--mg);
+    border-radius: 3px;
+    color: var(--mg);
   }
   .contents1 {
     background: var(--bg);
