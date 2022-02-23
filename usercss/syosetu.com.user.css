@@ -18,4 +18,10 @@
     background: var(--bg);
     color: var(--fg);
   }
+  #novel_header {
+    background: var(--bg);
+  }
+  ul#head_nav li a {
+    color: var(--fg);
+  }
 }
