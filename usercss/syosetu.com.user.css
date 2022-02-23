@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           syosetu.com
 @namespace      fuzakebito
-@version        0.1.2
+@version        0.1.3
 @homepageURL    https://github.com/fuzakebito/stylusUserCss
 @updateURL      https://github.com/fuzakebito/stylusUserCss/raw/main/usercss/syosetu.com.user.css
 @author         fuzakebito
@@ -17,6 +17,7 @@
     --fg-light: #e3e1ea;
     --red: #cc5655;
     --mg: #aa88c8;
+    --mg-light: #bd9bdc;
     --br: #809fd1;
     --cy-light: #6ebdc2;
   }
@@ -270,7 +271,7 @@
   }
   .recommend_novel a:hover {
     background: inherit;
-    color: var(--fg);
+    color: var(--mg-light);
   }
   ul.reco li.genre {
     background: var(--mg);
