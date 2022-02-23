@@ -1,13 +1,13 @@
 /* ==UserStyle==
 @name           syosetu.com
 @namespace      fuzakebito
-@version        0.2.0
+@version        0.2.1
 @homepageURL    https://github.com/fuzakebito/stylusUserCss
 @updateURL      https://github.com/fuzakebito/stylusUserCss/raw/main/usercss/syosetu.com.user.css
 @author         fuzakebito
 ==/UserStyle== */
 
-@-moz-document regexp(".*\\.syosetu\\.com\\/.*") {
+@-moz-document regexp("^https?://(ncode|novelcom)\\.syosetu\\.com/.*") {
   :root {
     --bg: #27262c;
     --bg-light: #35343d;
@@ -42,6 +42,9 @@
   body {
     background: var(--bg);
     color: var(--fg);
+  }
+  h1 {
+    border-color: var(--bg-morelight);
   }
   a, #footer .undernavi a {
     color: var(--br);
@@ -301,9 +304,6 @@
   .contents_header {
     border-color: var(--bg-morelight);
   }
-  h1 {
-    border-color: var(--bg-morelight);
-  }
   .p-quick-setting__body {
     border-color: var(--bg-morelight);
   }
@@ -384,5 +384,50 @@
   }
   #review label {
     color: var(--gr);
+  }
+}
+
+@-moz-document regexp("^https?://ncode\\.syosetu\\.com/novelview/infotop/ncode/.*") {
+  p#ncode, .uketuke, #onazi .info {
+    color: var(--gr);
+  }
+  h1 a, h1 a:visited {
+    color: var(--fg);
+  }
+  #noveltype {
+    background: inherit;
+    border-color: var(--gr);
+    color: var(--gr);
+  }
+  #noveltype_notend {
+    background: var(--bg-light);
+    border-color: var(--bg-morelight);
+    color: var(--fg);
+  }
+  #noveltable1 th, #noveltable1 td, #noveltable2 th, #noveltable2 td {
+    border-color: var(--bg);
+  }
+  #noveltable1 th, #noveltable2 th {
+    background: var(--bg-light);
+    color: var(--fg);
+  }
+  #novelindex_button {
+    border: none;
+  }
+  #novelindex_button a {
+    background: var(--bg-light);
+    border-color: var(--mg);
+    color: var(--fg);
+  }
+  #novelindex_button a:hover {
+    background: var(--mg);
+    border-color: var(--bg);
+    color: var(--fg-light);
+  }
+  #onazi {
+    border-color: var(--bg-morelight);
+  }
+  #onazi .th {
+    background: var(--bg-light);
   }
 }
