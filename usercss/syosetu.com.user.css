@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           syosetu.com
 @namespace      fuzakebito
-@version        0.0.7
+@version        0.1.0
 @homepageURL    https://github.com/fuzakebito/stylusUserCss
 @updateURL      https://github.com/fuzakebito/stylusUserCss/raw/main/usercss/syosetu.com.user.css
 @author         fuzakebito
@@ -11,35 +11,77 @@
   :root {
     --bg: #27262c;
     --bg-light: #35343d;
+    --bg-morelight: #42404e;
+    --gr: #7e7b8b;
     --fg: #bebdc9;
-    --gr: #4aad78;
+    --red: #cc5655;
     --mg: #aa88c8;
-    --cy: #5aaaaf;
+    --br: #809fd1;
+    --cy-light: #6ebdc2;
   }
+  /* css reset */
+  textarea {
+    color: var(--fg);
+    background-color: var(--bg-light);
+  }
+  input {
+    color: var(--fg);
+    background-color: var(--bg-light);
+  }
+  input[type="submit"] {
+    color: var(--fg);
+    background-color: var(--bg-light);
+  }
+  :focus-visible {
+    outline: none;
+  }
+  /* end of css reset */
   body {
     background: var(--bg);
     color: var(--fg);
   }
-  a {
-    color: var(--cy);
+  a, #footer .undernavi a {
+    color: var(--br);
   }
-  a:hover {
-    color: var(--gr);
-  }
-  a:visited {
+  a:visited, #footer .undernavi a:visited {
     color: var(--mg);
+  }
+  a:hover, #footer .undernavi a:hover {
+    color: var(--cy-light);
   }
   #novel_header {
     background: var(--bg-light);
   }
   ul#head_nav li a {
     color: var(--fg);
+    border-color: var(--fg);
+    transition: color 0.2s ease-in-out;
+  }
+  ul#head_nav li a:hover {
+    color: var(--mg);
+    background: var(--bg-light);
   }
   ul#head_nav .booklist .login {
     background: var(--bg-light);
     border-color: var(--mg);
     border-radius: 3px;
     color: var(--mg);
+  }
+  .footerbookmark .booklist .login {
+    background: var(--bg-light);
+    border-color: var(--mg);
+    border-radius: 3px;
+    color: var(--mg) !important;
+  }
+  ul#head_nav li.booklist_now a {
+    background: var(--bg-morelight);
+    border: none;
+    color: var(--fg);
+  }
+  .footerbookmark li.booklist_now a {
+    background: var(--bg-morelight);
+    border: none;
+    color: var(--fg) !important;
   }
   #novelnavi_right #menu_on, #novelnavi_right #menu_off {
     background: var(--bg-light);
@@ -61,10 +103,164 @@
   ul.novelview_menu a {
     color: var(--mg);
   }
+  #pageBottom, #pageTop, .button {
+    background: var(--bg-light);
+    border: 1px solid var(--mg);
+    border-radius: 3px;
+    color: var(--mg);
+    text-shadow: none;
+    font-weight: bold;
+  }
+  #pageBottom:hover, #pageTop:hover, .button:hover {
+    background: var(--bg-morelight);
+    color: var(--mg);
+  }
+  .button:hover {
+    border: 1px solid var(--mg);
+  }
   .contents1 {
     background: var(--bg);
   }
   #novel_color {
+    color: var(--fg);
+  }
+  .wrap_menu_novelview_after {
+    background: var(--bg-light);
+    border: none;
+  }
+  .list_menu_novelview_after:first-child {
+    border-color: var(--fg);
+  }
+  .list_menu_novelview_after a {
+    color: var(--fg) !important;
+    transition: color 0.2s ease-in-out;
+  }
+  .list_menu_novelview_after a:hover {
+    background: var(--bg-light);
+    color: var(--mg) !important;
+  }
+  .footerbookmark li.bookmark_now a {
+    transition: color 0.2s ease-in-out;
+  }
+  .footerbookmark li.bookmark_now a:hover {
+    color: var(--mg) !important;
+  }
+  .p-novelgood-form__intro {
+    background: var(--bg-light);
+    border: none;
+  }
+  .p-novelgood-form__note {
+    color: var(--fg);
+  }
+  .p-novelgood-form__intro:before {
+    border-top-color: var(--bg-light);
+  }
+  .p-novelgood-form__icon {
+    background-color: var(--bg-light);
+    border-color: var(--bg-morelight);
+  }
+  .p-novelgood-form__icon.is-empty a:after {
+    color: var(--fg);
+  }
+  .p-novelgood-form__icon.is-active a:after {
+    color: var(--mg);
+  }
+  .p-novelgood-form__icon--stop span {
+    color: var(--fg) !important;
+  }
+  .p-novelpoint-form {
+    background-color: var(--bg-light);
+    border: none;
+    color: var(--fg) !important;
+  }
+  .p-novelpoint-form a {
+    color: var(--br) !important;
+  }
+  .tippy-tooltip[data-template-id="#toaster_success"] {
+	  background: var(--mg);
+    opacity: 0.8;
+  }
+  .tippy-tooltip[data-template-id="#toaster_error"] {
+	  background: var(--red);
+    opacity: 0.8;
+  }
+  .tippy-tooltip[data-template-id="#bookmark_save_toaster"] {
+	  background: var(--mg);
+    opacity: 0.8;
+  }
+  .toaster.bookmarker_addend {
+	  background: var(--mg);
+    opacity: 0.8;
+  }
+  .toaster.bookmarker_error {
+	  background: var(--red);
+    opacity: 0.8;
+  }
+  #impression, #review {
+    background: var(--bg);
+    border: 1px solid var(--mg);
+    border-radius: 3px;
+    color: var(--fg) !important;
+  }
+  #novel_contents #impression a, #novel_contents #review a, #novel_contents #novel_hyouka a {
+    color: var(--br);
+  }
+  .novelreport_attention {
+    color: var(--red);
+  }
+  #impression textarea, #review textarea {
+    background: var(--bg-light);
+    border: none;
+    border-radius: 3px;
+  }
+  textarea:focus, input[type="text"]:focus  {
+    box-shadow:none;
+    border: 1px solid var(--mg) !important;
+  }
+  #novel_attention {
+    background: var(--bg-light);
+    border: none;
+  }
+  .attention {
+    color: var(--red);
+  }
+  #novel_footer {
+    border-top: 3px double var(--bg-morelight);
+    border-bottom: 3px double var(--bg-morelight);
+  }
+  #footer {
+    background: var(--bg-light);
+    border: none;
+  }
+  dl.novel_sublist2 {
+    border-bottom-color: var(--bg-morelight);
+  }
+  #recommend {
+    background: var(--bg-light);
+    border: none;
+  }
+  .recommend_novel {
+    background: var(--bg);
+    border: none;
+  }
+  .recommend_novel a {
+    color: var(--fg);
+  }
+  .recommend_novel a:visited {
+    color: var(--gr);
+  }
+  .recommend_novel a:hover {
+    background: inherit;
+    color: var(--fg);
+  }
+  ul.reco li.genre {
+    background: var(--mg);
+    border: none;
+    color: var(--bg);
+  }
+  ul.reco li.user {
+    background: var(--bg-light);
+    border: none;
     color: var(--fg);
   }
 }
