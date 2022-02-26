@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           syosetu.com
 @namespace      fuzakebito
-@version        0.2.1
+@version        0.2.2
 @homepageURL    https://github.com/fuzakebito/stylusUserCss
 @updateURL      https://github.com/fuzakebito/stylusUserCss/raw/main/usercss/syosetu.com.user.css
 @author         fuzakebito
@@ -384,6 +384,9 @@
   }
   #review label {
     color: var(--gr);
+  }
+  .nothing {
+    background: var(--bg-light);
   }
 }
 
