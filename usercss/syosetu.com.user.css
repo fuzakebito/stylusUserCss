@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           syosetu.com
 @namespace      fuzakebito
-@version        0.2.2
+@version        0.2.3
 @homepageURL    https://github.com/fuzakebito/stylusUserCss
 @updateURL      https://github.com/fuzakebito/stylusUserCss/raw/main/usercss/syosetu.com.user.css
 @author         fuzakebito
@@ -34,6 +34,11 @@
   input[type="submit"] {
     color: var(--fg);
     background-color: var(--bg-light);
+  }
+  select {
+    color: var(--fg);
+    background: var(--bg-light);
+    border-color: var(--gr);
   }
   :focus-visible {
     outline: none;
@@ -224,6 +229,32 @@
   }
   .footerbookmark li.bookmark_now a:hover {
     color: var(--mg) !important;
+  }
+  .narou_modal {
+    background: var(--bg-light);
+  }
+  .remodal {
+    background: var(--bg-light);
+    color: var(--fg);
+  }
+  .narou_modal p.mes {
+    color: var(--mg);
+  }
+  .narou_modal .favnovelmain_update {
+    border-color: var(--mg);
+  }
+  .narou_modal .favnovelmain_update h3 {
+    background: var(--bg-morelight);
+    color: var(--fg);
+  }
+  .narou_modal a.button, .narou_modal input.button, .narou_modal .button_remodal {
+    background: var(--bg-light);
+    border-color: var(--mg);
+    color: var(--mg) !important;
+  }
+  .narou_modal a.button:hover, .narou_modal input.button:hover, .narou_modal .button_remodal:hover {
+    background: var(--mg);
+    color: var(--fg-light) !important;
   }
   .p-novelgood-form__intro {
     background: var(--bg-light);
