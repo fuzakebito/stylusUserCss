@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           syosetu.com
 @namespace      fuzakebito
-@version        0.2.3
+@version        0.2.4
 @homepageURL    https://github.com/fuzakebito/stylusUserCss
 @updateURL      https://github.com/fuzakebito/stylusUserCss/raw/main/usercss/syosetu.com.user.css
 @author         fuzakebito
@@ -346,6 +346,22 @@
     background: var(--bg-light);
     color: var(--fg);
     border: none;
+  }
+  .c-form__select:active, .c-form__select:focus, .c-form__select:hover {
+    background: var(--bg-light);
+    color: var(--gr) !important;
+  }
+  .c-button--form {
+    background: var(--bg-light);
+    color: var(--fg);
+    border: none;
+  }
+  .c-button--form:active, .c-button--form:focus, .c-button--form:hover {
+    background: var(--bg-light);
+    color: var(--gr) !important;
+  }
+  a.linktext_color_black, a.linktext_color_black:visited, a.linktext_color_black:hover[href] {
+    color: var(--fg);
   }
   .c-button--none-active {
     background: var(--bg-light);
